@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="growth.css" />
     <link rel="stylesheet" href="support.css" />
     <link rel="stylesheet" href="age.css" />
+    <link rel="stylesheet" href="events.css" />
   </head>
   <body>
     <header class="nav">
@@ -81,6 +82,15 @@
         <div class="feather-demo" aria-label="Example Feather event matching experience">
           <div class="event-card"><div class="event-top"><span class="live-dot"></span> Tonight · 7:00–9:30 PM</div><h3>Sunday supper<br />at The Glasshouse</h3><p>14 people are here</p><div class="feather-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><i>✦</i></div><div class="match-card"><div class="match-avatar">N</div><div><small id="match-status">A feather nearby</small><strong id="match-name">Someone shares your pace</strong><p id="match-interests">Family dinners · pottery · slow Sundays</p></div><button id="wave-button" aria-label="Wave hello">↗</button></div><button class="feather-toggle" id="feather-toggle" type="button" aria-pressed="false"><span></span> Turn on my Feather</button></div>
           <p class="demo-caption">The Feather does the introduction. You decide what happens next.</p>
+        </div>
+      </section>
+
+      <section class="events" id="events">
+        <div class="events-heading"><p class="eyebrow">Find your circle</p><h2>More of the people<br />who feel like <em>your people.</em></h2><p>Tell us your area and discover relaxed, interest-led events for adults 30+.</p><form class="area-search" id="area-search"><label for="area-input">Your town or area</label><div><input id="area-input" placeholder="e.g. Brixton or Manchester" /><button type="submit">Show events →</button></div></form></div>
+        <div class="event-results" id="event-results" aria-live="polite">
+          <article class="local-event"><p class="event-type">Food &amp; conversation</p><h3>Long-table supper</h3><p class="event-details">Thursday · 7:00 PM<br /><span class="event-area">Near you</span></p><p>For people who love a proper meal, unhurried conversation, and making a few good connections.</p><footer><span>12 going</span><button type="button" class="save-event">Save event ♡</button></footer></article>
+          <article class="local-event featured"><p class="event-type">New beginnings</p><h3>Sunday walk &amp; coffee</h3><p class="event-details">Sunday · 10:30 AM<br /><span class="event-area">Near you</span></p><p>A low-pressure meet-up for a fresh-air walk, friendly faces, and a good coffee afterwards.</p><footer><span>18 going</span><button type="button" class="save-event">Save event ♡</button></footer></article>
+          <article class="local-event"><p class="event-type">Creative &amp; curious</p><h3>Make something together</h3><p class="event-details">Tuesday · 6:30 PM<br /><span class="event-area">Near you</span></p><p>A welcoming evening for creative people, first-timers, and anyone wanting a more natural way to meet.</p><footer><span>9 going</span><button type="button" class="save-event">Save event ♡</button></footer></article>
         </div>
       </section>
 
