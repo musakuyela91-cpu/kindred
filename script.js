@@ -19,6 +19,6 @@ modal.addEventListener('click', event => { if (event.target === modal) closeModa
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
 form.addEventListener('submit', event => {
   event.preventDefault();
-  message.textContent = 'Thanks — your Kindred journey is ready to begin.';
+  message.textContent = 'Thanks — your Feather journey is ready to begin.';
   form.reset();
 });
