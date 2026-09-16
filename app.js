@@ -13,6 +13,7 @@ const matchName = document.querySelector('#match-name');
 const interests = document.querySelector('#match-interests');
 const joinForm = document.querySelector('#join-form');
 const message = document.querySelector('.form-message');
+const growthChoice = document.querySelector('#growth-choice');
 const profile = () => { try { return JSON.parse(localStorage.getItem(FEATHER_PROFILE_KEY)); } catch { return null; } };
 function renderFeather() {
   const active = localStorage.getItem(FEATHER_KEY) === 'true';
@@ -20,6 +21,8 @@ function renderFeather() {
   toggle.innerHTML = `<span></span> ${active ? 'Your Feather is on' : 'Turn on my Feather'}`;
   wave.disabled = !active; status.textContent = active ? 'A feather nearby' : 'Turn on your Feather to connect';
 }
+growthChoice.checked = localStorage.getItem('feather-growth-choice') === 'true';
+growthChoice.addEventListener('change', () => localStorage.setItem('feather-growth-choice', String(growthChoice.checked)));
 toggle.addEventListener('click', () => {
   if (!profile()) { document.querySelector('[data-open-modal="join"]').click(); message.textContent = 'Create your profile before joining the event.'; return; }
   localStorage.setItem(FEATHER_KEY, String(localStorage.getItem(FEATHER_KEY) !== 'true')); renderFeather();
@@ -32,6 +35,6 @@ wave.addEventListener('click', () => {
 });
 joinForm.addEventListener('submit', () => {
   const [name, email] = [...joinForm.querySelectorAll('input')].map(input => input.value.trim());
-  if (name && email) localStorage.setItem(FEATHER_PROFILE_KEY, JSON.stringify({ name, email, joinedAt: new Date().toISOString() }));
+  if (name && email) localStorage.setItem(FEATHER_PROFILE_KEY, JSON.stringify({ name, email, growthMinded: growthChoice.checked, joinedAt: new Date().toISOString() }));
 });
 renderFeather();
