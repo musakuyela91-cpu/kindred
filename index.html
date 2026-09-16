@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kindred is a considered dating space for people building meaningful connections around real family life." />
+    <title>Kindred — Dating for real life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="feather.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#home" aria-label="Kindred home"><span>k</span>indred</a>
+      <nav aria-label="Main navigation">
+        <a href="#how">How it works</a>
+        <a href="#values">Our approach</a>
+        <a href="#stories">Stories</a>
+      </nav>
+      <button class="text-button" data-open-modal="login">Log in</button>
+      <button class="nav-join" data-open-modal="join">Join Kindred <span>→</span></button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Dating for real life</p>
+          <h1>Love that makes <em>room</em> for everything.</h1>
+          <p class="lede">A dating space for single parents—and people ready for a relationship with depth, warmth, and an actual calendar.</p>
+          <div class="hero-actions">
+            <button class="primary-button" data-open-modal="join">Find your person <span>→</span></button>
+            <a class="watch-link" href="#how"><span class="play">▶</span> See how it works</a>
+          </div>
+          <div class="member-line">
+            <div class="faces" aria-hidden="true"><i>J</i><i>A</i><i>R</i><i>M</i></div>
+            <p>Made for people who know<br /><strong>connection takes intention.</strong></p>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="A happy couple laughing together">
+          <div class="sun"></div>
+          <div class="arch"></div>
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=85" alt="Two people smiling and walking together" />
+          <div class="note note-top">✦  Meaningful, not rushed</div>
+          <div class="note note-bottom"><span>♥</span> You deserve a good love story.</div>
+        </div>
+      </section>
+
+      <section class="intro" id="values">
+        <p class="eyebrow">Built around what matters</p>
+        <h2>Not a dating app that happens to include parents.<br />A better way to date, <em>period.</em></h2>
+        <div class="pillars">
+          <article><span class="icon">◌</span><h3>People who get it</h3><p>Meet singles who welcome the richness, responsibility, and rhythm of family life.</p></article>
+          <article><span class="icon">↗</span><h3>Dates that fit</h3><p>Share your availability upfront. Fewer awkward logistics, more time together.</p></article>
+          <article><span class="icon">♡</span><h3>Safety with care</h3><p>Photo checks, thoughtful reporting, and controls that keep your family private.</p></article>
+        </div>
+      </section>
+
+      <section class="feather" id="feather">
+        <div class="feather-copy">
+          <p class="eyebrow">Meet in the moment</p>
+          <h2>One small feather.<br />A room full of <em>possibility.</em></h2>
+          <p>At a Kindred event, switch on your Feather to discover other attendees who are open to meeting someone like you. No precise location sharing. No pressure. Just a gentle signal that you’re both here.</p>
+          <div class="privacy-note"><span>◈</span><div><strong>You’re always in control</strong><br />Visible only while you choose—and only to opted-in people at this event.</div></div>
+        </div>
+        <div class="feather-demo" aria-label="Example Kindred event matching experience">
+          <div class="event-card"><div class="event-top"><span class="live-dot"></span> Tonight · 7:00–9:30 PM</div><h3>Sunday supper<br />at The Glasshouse</h3><p>14 kindred people are here</p><div class="feather-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><i>✦</i></div><div class="match-card"><div class="match-avatar">N</div><div><small id="match-status">A feather nearby</small><strong id="match-name">Someone shares your pace</strong><p id="match-interests">Family dinners · pottery · slow Sundays</p></div><button id="wave-button" aria-label="Wave hello">↗</button></div><button class="feather-toggle" id="feather-toggle" type="button" aria-pressed="false"><span></span> Turn on my Feather</button></div>
+          <p class="demo-caption">The Feather does the introduction. You decide what happens next.</p>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <div class="how-image"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=85" alt="Parent and child walking outdoors" /></div>
+        <div class="how-copy">
+          <p class="eyebrow">A more human match</p>
+          <h2>Start with the things that make life <em>yours.</em></h2>
+          <ol>
+            <li><b>01</b><div><h3>Tell your real story</h3><p>Share your values, your pace, and what you’re looking forward to—not just a highlight reel.</p></div></li>
+            <li><b>02</b><div><h3>Meet with clarity</h3><p>Our prompts make it easy to discover mutual intentions before the first hello.</p></div></li>
+            <li><b>03</b><div><h3>Make time for a spark</h3><p>Plan a date that works with life as it is. No guilt, no games.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="quote" id="stories"><span>“</span><blockquote>It felt refreshing to meet someone who understood that a cancelled babysitter didn’t mean I wasn’t interested.</blockquote><p>— Priya &amp; Daniel, together for 18 months</p></section>
+    </main>
+
+    <footer><a class="brand" href="#home"><span>k</span>indred</a><p>© 2026 Kindred. Love, on your terms.</p><div><a href="#">Safety</a><a href="#">Privacy</a><a href="#">Support</a></div></footer>
+
+    <div class="modal-backdrop" id="modal" aria-hidden="true">
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="close" aria-label="Close">×</button>
+        <p class="eyebrow">Welcome to Kindred</p>
+        <h2 id="modal-title">A good story can start here.</h2>
+        <p class="modal-text">Create your profile in a few considered steps. Your details stay yours.</p>
+        <form id="join-form"><label>First name<input required placeholder="Your first name" /></label><label>Email<input required type="email" placeholder="you@example.com" /></label><button class="primary-button" type="submit">Start your profile <span>→</span></button></form>
+        <p class="form-message" role="status"></p>
+      </section>
+    </div>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
