@@ -1,6 +1,6 @@
-/* Kindred client-side prototype. Replace localStorage with authenticated API calls in production. */
-const KINDRED_KEY = 'kindred-profile';
-const FEATHER_KEY = 'kindred-feather-active';
+/* Feather client-side prototype. Replace localStorage with authenticated API calls in production. */
+const FEATHER_PROFILE_KEY = 'feather-profile';
+const FEATHER_KEY = 'feather-active';
 const attendees = [
   { name: 'Nora', interests: 'Family dinners · pottery · slow Sundays', match: 'Someone shares your pace' },
   { name: 'Maya', interests: 'Live music · long walks · cooking', match: 'A very good conversation awaits' },
@@ -13,7 +13,7 @@ const matchName = document.querySelector('#match-name');
 const interests = document.querySelector('#match-interests');
 const joinForm = document.querySelector('#join-form');
 const message = document.querySelector('.form-message');
-const profile = () => { try { return JSON.parse(localStorage.getItem(KINDRED_KEY)); } catch { return null; } };
+const profile = () => { try { return JSON.parse(localStorage.getItem(FEATHER_PROFILE_KEY)); } catch { return null; } };
 function renderFeather() {
   const active = localStorage.getItem(FEATHER_KEY) === 'true';
   toggle.setAttribute('aria-pressed', String(active)); toggle.classList.toggle('active', active);
@@ -32,6 +32,6 @@ wave.addEventListener('click', () => {
 });
 joinForm.addEventListener('submit', () => {
   const [name, email] = [...joinForm.querySelectorAll('input')].map(input => input.value.trim());
-  if (name && email) localStorage.setItem(KINDRED_KEY, JSON.stringify({ name, email, joinedAt: new Date().toISOString() }));
+  if (name && email) localStorage.setItem(FEATHER_PROFILE_KEY, JSON.stringify({ name, email, joinedAt: new Date().toISOString() }));
 });
 renderFeather();
