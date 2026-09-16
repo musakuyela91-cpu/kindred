@@ -17,6 +17,7 @@ const growthChoice = document.querySelector('#growth-choice');
 const donateButton = document.querySelector('#donate-button');
 const sponsorButton = document.querySelector('#sponsor-button');
 const supportMessage = document.querySelector('#support-message');
+const areaSearch = document.querySelector('#area-search');
 const profile = () => { try { return JSON.parse(localStorage.getItem(FEATHER_PROFILE_KEY)); } catch { return null; } };
 function renderFeather() {
   const active = localStorage.getItem(FEATHER_KEY) === 'true';
@@ -28,6 +29,14 @@ growthChoice.checked = localStorage.getItem('feather-growth-choice') === 'true';
 growthChoice.addEventListener('change', () => localStorage.setItem('feather-growth-choice', String(growthChoice.checked)));
 donateButton.addEventListener('click', () => { supportMessage.textContent = 'Thank you. Donations will be available when Feather’s community fund launches.'; });
 sponsorButton.addEventListener('click', () => { supportMessage.textContent = 'Sponsor enquiries will open soon. We only accept clear, relevant, family-safe messages.'; });
+areaSearch.addEventListener('submit', event => {
+  event.preventDefault();
+  const area = document.querySelector('#area-input').value.trim() || 'your area';
+  document.querySelectorAll('.event-area').forEach(item => { item.textContent = area; });
+});
+document.querySelectorAll('.save-event').forEach(button => button.addEventListener('click', () => {
+  button.classList.toggle('saved'); button.textContent = button.classList.contains('saved') ? 'Saved ✓' : 'Save event ♡';
+}));
 toggle.addEventListener('click', () => {
   if (!profile()) { document.querySelector('[data-open-modal="join"]').click(); message.textContent = 'Create your profile before joining the event.'; return; }
   localStorage.setItem(FEATHER_KEY, String(localStorage.getItem(FEATHER_KEY) !== 'true')); renderFeather();
